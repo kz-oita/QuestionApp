@@ -13,6 +13,12 @@
 		0E6BD8532470FCA300C9D9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BD8512470FCA300C9D9D0 /* Main.storyboard */; };
 		0E6BD8552470FCA400C9D9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BD8542470FCA400C9D9D0 /* Assets.xcassets */; };
 		0E6BD8582470FCA400C9D9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BD8562470FCA400C9D9D0 /* LaunchScreen.storyboard */; };
+		0E6BD8622470FF8800C9D9D0 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BD85F2470FF8800C9D9D0 /* sound.mp3 */; };
+		0E6BD8632470FF8800C9D9D0 /* batsuSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BD8602470FF8800C9D9D0 /* batsuSound.mp3 */; };
+		0E6BD8642470FF8800C9D9D0 /* maruSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BD8612470FF8800C9D9D0 /* maruSound.mp3 */; };
+		0E6BD869247101C600C9D9D0 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BD868247101C600C9D9D0 /* NextViewController.swift */; };
+		0E6BD86B2471076D00C9D9D0 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BD86A2471076D00C9D9D0 /* ImagesModel.swift */; };
+		0E6BD86D247108A500C9D9D0 /* ImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6BD86C247108A500C9D9D0 /* ImagesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		0E6BD8542470FCA400C9D9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E6BD8572470FCA400C9D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E6BD8592470FCA400C9D9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E6BD85F2470FF8800C9D9D0 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		0E6BD8602470FF8800C9D9D0 /* batsuSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batsuSound.mp3; sourceTree = "<group>"; };
+		0E6BD8612470FF8800C9D9D0 /* maruSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = maruSound.mp3; sourceTree = "<group>"; };
+		0E6BD868247101C600C9D9D0 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		0E6BD86A2471076D00C9D9D0 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
+		0E6BD86C247108A500C9D9D0 /* ImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,45 @@
 		0E6BD84A2470FCA300C9D9D0 /* questionApp */ = {
 			isa = PBXGroup;
 			children = (
+				0E6BD8652471002500C9D9D0 /* Model */,
+				0E6BD8662471004A00C9D9D0 /* View */,
+				0E6BD8672471005300C9D9D0 /* Controller */,
+				0E6BD8562470FCA400C9D9D0 /* LaunchScreen.storyboard */,
+				0E6BD8592470FCA400C9D9D0 /* Info.plist */,
+				0E6BD8602470FF8800C9D9D0 /* batsuSound.mp3 */,
+				0E6BD8612470FF8800C9D9D0 /* maruSound.mp3 */,
+				0E6BD85F2470FF8800C9D9D0 /* sound.mp3 */,
+			);
+			path = questionApp;
+			sourceTree = "<group>";
+		};
+		0E6BD8652471002500C9D9D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BD86A2471076D00C9D9D0 /* ImagesModel.swift */,
+				0E6BD86C247108A500C9D9D0 /* ImagesList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E6BD8662471004A00C9D9D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E6BD8512470FCA300C9D9D0 /* Main.storyboard */,
+				0E6BD8542470FCA400C9D9D0 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E6BD8672471005300C9D9D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				0E6BD84B2470FCA300C9D9D0 /* AppDelegate.swift */,
 				0E6BD84D2470FCA300C9D9D0 /* SceneDelegate.swift */,
 				0E6BD84F2470FCA300C9D9D0 /* ViewController.swift */,
-				0E6BD8512470FCA300C9D9D0 /* Main.storyboard */,
-				0E6BD8542470FCA400C9D9D0 /* Assets.xcassets */,
-				0E6BD8562470FCA400C9D9D0 /* LaunchScreen.storyboard */,
-				0E6BD8592470FCA400C9D9D0 /* Info.plist */,
+				0E6BD868247101C600C9D9D0 /* NextViewController.swift */,
 			);
-			path = questionApp;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +167,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6BD8622470FF8800C9D9D0 /* sound.mp3 in Resources */,
 				0E6BD8582470FCA400C9D9D0 /* LaunchScreen.storyboard in Resources */,
 				0E6BD8552470FCA400C9D9D0 /* Assets.xcassets in Resources */,
+				0E6BD8632470FF8800C9D9D0 /* batsuSound.mp3 in Resources */,
 				0E6BD8532470FCA300C9D9D0 /* Main.storyboard in Resources */,
+				0E6BD8642470FF8800C9D9D0 /* maruSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6BD8502470FCA300C9D9D0 /* ViewController.swift in Sources */,
+				0E6BD86D247108A500C9D9D0 /* ImagesList.swift in Sources */,
+				0E6BD869247101C600C9D9D0 /* NextViewController.swift in Sources */,
 				0E6BD84C2470FCA300C9D9D0 /* AppDelegate.swift in Sources */,
 				0E6BD84E2470FCA300C9D9D0 /* SceneDelegate.swift in Sources */,
+				0E6BD86B2471076D00C9D9D0 /* ImagesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oitakazuki.questionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oitakazuki.questionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
