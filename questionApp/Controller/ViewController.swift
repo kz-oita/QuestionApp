@@ -20,14 +20,25 @@ class ViewController: UIViewController, NowScoreDelegate {
     var maxScore = 0
     var questionNumber = 0
     
-    let imagesList = ImagesList()
+    var imagesList = ImagesList()
+    var gradientLayer = CAGradientLayer()
     
     //IBActionで検知した正答がどちらなのかを取得する変数
     var pickedAnswer = false
+    var soundFile = SoundFile()
+    var changeColor = ChangeColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        gradientLayer = changeColor.changeColor(topR: 0.07, topG: 0.13, topB: 0.26, topAlpha: 1.0, bottomR: 0.54, bottomG: 0.74, bottomB: 0.74, bottomAlpha: 1.0)
+        
+        gradientLayer.frame = view.bounds
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        imageView.layer.cornerRadius = 20.0
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,23 +62,17 @@ class ViewController: UIViewController, NowScoreDelegate {
         
         if (sender as AnyObject).tag == 1{
             
+            soundFile.playSound(fileName: "maruSound", extentionName:"mp3")
+            
             pickedAnswer = true
-            //丸ボタンが押された時
-            
-            //ユーザーが押したボタンがマルだった
-            
-            //マルボタンの音声をながす
             
         
         }else if(sender as AnyObject).tag == 2{
             
+            soundFile.playSound(fileName: "batsuSound", extentionName:"mp3")
+            
             pickedAnswer = false
-            //バツボタンが押された時
-            
-            //ユーザーが押したボタンがばつだった
-            
-            //バツボタンの音声をながす
-        
+
         }
         
         //チェック　回答があっているか（pickedAnswerのcorrectOrNotの値が一致しているかどうか）
@@ -111,6 +116,7 @@ class ViewController: UIViewController, NowScoreDelegate {
     
     func nowScore(score: Int) {
           
+        soundFile.playSound(fileName: "sound", extentionName:"mp3")
         maxScoreLabel.text = String(score)
     }
     
